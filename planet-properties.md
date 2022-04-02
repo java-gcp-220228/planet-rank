@@ -1,27 +1,18 @@
-## Planet Descriptions
-Planet Name
+# Planet Descriptions
+- Planet Name
 
-Host Name
+- Host Name
+- Neighboring Planets
+- Neighboring Stars
+- Discovery Year
+- Discovery Method
+- Orbital Period
 
-Neighboring Planets
+# Potential Descriptions
+- Discovery Facility
 
-Neighboring Stars
-
-Discovery Year
-
-Discovery Method
-
-Orbital Period
-
-## Potential Descriptions
-Discovery Facility
-
-Eccentricity
-
-Spectral Type
-
-Distance from Earth
-
-Gaia Magnitude
-
-Release Date
+- Eccentricity
+- Spectral Type
+- Distance from Earth
+- Gaia Magnitude
+- Release Date
