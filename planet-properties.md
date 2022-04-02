@@ -1,4 +1,4 @@
-# Planet Descriptions
+## Planet Descriptions
 Planet Name
 Host Name
 Neighboring Planets
@@ -7,7 +7,7 @@ Discovery Year
 Discovery Method
 Orbital Period
 
-### Potential Descriptions
+## Potential Descriptions
 Discovery Facility
 Eccentricity
 Spectral Type
