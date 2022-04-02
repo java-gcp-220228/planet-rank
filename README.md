@@ -1,5 +1,3 @@
-# planet-rank
- 
 ## Developers
     Javanshir Pashayev
 
