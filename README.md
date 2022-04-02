@@ -1,5 +1,6 @@
 ## Developers
     Javanshir Pashayev
+    Bryce Fransen
 
 ## Project Name
 Planet Rank 
