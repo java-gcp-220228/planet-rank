@@ -1,5 +1,8 @@
 ## Developers
-    Javanshir Pashayev
+  - Javanshir Pashayev
+  - Bryce Fransen
+  - Jack Ziegler
+  - Ankur Shahi
 
 ## Project Name
 Planet Rank 
