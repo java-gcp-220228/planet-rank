@@ -17,8 +17,11 @@ User can create an account and login. User can purchase/unlock a planet and add 
 Allow people to create a user account and buy different types of planets. Planets will have interesting information about each one of them, and can be displayed in a users collection.
 
 ## User Stories
-### 1 
-User has accumulated X tokens and wants to purchase planet Y. Program asks for inputs (w,x,z), upon a 200 status code add planet Y to the users collection. Update and display users collection of planets.
+#### 1 
+User logs in and wants to view different exoplanets and their details. User clicks on the exoplanet tab, and gets taken to a page of different cards detailing planets. The user can scroll through the gallery and hover over a card to flip it and see the planet details.
+
+#### 2
+User logs in and wants to view images of different planets. User clicks on the planet image tab, and gets taken to an image gallery. The user can scroll through the gallery and view all the different planets.
 
 ## Technologies 
     NASA Exoplanet Archive API 
