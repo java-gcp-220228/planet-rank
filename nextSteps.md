@@ -1,5 +1,13 @@
 ## Next Potential Steps 
 
+### Workflows/Pipeline
+- Setup Workflow using Github Actions with git repo for CI 
+- Setup Jenkins for CD
+- Follow (CI/CD)
+- Review Gradle/Gradle Tasks/Gradle Jar/Build
+- Review Workflows/Github Actions
+- Review Pipeline/Jenkins
+
 ### Front-End 
 - Setup Login page
 - Send a request to the api and get some kind of response
@@ -21,13 +29,8 @@
 - Input Images into db
 - Input messages into db from front-end
 
-#### Host Everything on the Cloud
+### Host Everything on the Cloud
 - GCP Compute Engine 
 - GCP Cloud Storage 
 - GCP SQL 
 - Firebase (owned by google)
-
-#### Workflows/Pipeline
-- Github Actions
-- Jenkins
-- Follow (CI/CD)
