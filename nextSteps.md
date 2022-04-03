@@ -1,36 +1,36 @@
-## Next Potential Steps 
+# Next Potential Steps 
 
-### Workflows/Pipeline
-- Setup Workflow using Github Actions with git repo for CI 
-- Setup Jenkins for CD
-- Follow (CI/CD)
-- Review Gradle/Gradle Tasks/Gradle Jar/Build
-- Review Workflows/Github Actions
-- Review Pipeline/Jenkins
+### Front-End
+- Setup dummy Login page
 
-### Front-End 
-- Setup Login page
 - Send a request to the api and get some kind of response
-- Display this info on the front end
+- Display response with some format
 - Implement filters
 - Implement a way to post messages
 - Prettify Everything
+- Firebase (owned by google)
+#
 
 ### Back-end
-- Setup Login Functionality
-- JJwt Authentication
-- MessagesController/ExceptionController
+- Setup Github Actions | Configure a Workflow
+
+- Setup Jenkins 
+- Review Pipeline/Jenkins
+- Develop Login Functionality
+- Enable JJwt Authentication
+- [N - Tier Architechture]
+- MessagesController/ExceptionController | Configure Service and DAO layer 
 - POST messages to database when user inputs a message
 - GET all messages from db when a user wants to see the messages
+- GCP Compute Engine 
+#
 
 ### DB
 - Setup ERD Diagram
+
 - Work on SQL Script
 - Input Images into db
 - Input messages into db from front-end
-
-### Host Everything on the Cloud
-- GCP Compute Engine 
 - GCP Cloud Storage 
 - GCP SQL 
-- Firebase (owned by google)
+#
