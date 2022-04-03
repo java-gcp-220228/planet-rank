@@ -23,6 +23,8 @@
 - POST messages to database when user inputs a message
 - GET all messages from db when a user wants to see the messages
 - GCP Compute Engine 
+- Install Docker | Configure Dockerfile | Build Image
+- Install DockerCompose | docker-compose.yml
 #
 
 ### DB

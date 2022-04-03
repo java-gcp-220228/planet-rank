@@ -40,5 +40,6 @@ User logs in and wants to view images of different planets. User clicks on the p
     Jenkins
     Github Actions
     Sonar Cloud
+    JaCoCo
     JUnit/Mockito
     Firebase/GCP Compute Engine/GCP Cloud Storage
