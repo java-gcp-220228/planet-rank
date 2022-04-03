@@ -8,7 +8,7 @@
 - Implement filters
 - Implement a way to post messages
 - Prettify Everything
-- Firebase (owned by google)
+- Firebase
 #
 
 ### Back-end
@@ -33,4 +33,3 @@
 - Input messages into db from front-end
 - GCP Cloud Storage 
 - GCP SQL 
-#
