@@ -1,6 +1,5 @@
 package com.revature.planetrank.models;
 import javax.persistence.*;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -19,19 +18,18 @@ public class ExoplanetComments {
 
     @Column
     @JoinColumn()
-    private Exoplanets exoplanet;
-
+    private Exoplanet exoplanet;
 
     public ExoplanetComments() {
     }
 
-    public ExoplanetComments(String comment, UserModel author, Exoplanets exoplanet) {
+    public ExoplanetComments(String comment, UserModel author, Exoplanet exoplanet) {
         this.comment = comment;
         this.author = author;
         this.exoplanet = exoplanet;
     }
 
-    public ExoplanetComments(int exoplanetCommentId, String comment, UserModel author, Exoplanets exoplanet) {
+    public ExoplanetComments(int exoplanetCommentId, String comment, UserModel author, Exoplanet exoplanet) {
         this.exoplanetCommentId = exoplanetCommentId;
         this.comment = comment;
         this.author = author;
@@ -62,11 +60,11 @@ public class ExoplanetComments {
         this.author = author;
     }
 
-    public Exoplanets getExoplanet() {
+    public Exoplanet getExoplanet() {
         return exoplanet;
     }
 
-    public void setExoplanet(Exoplanets exoplanet) {
+    public void setExoplanet(Exoplanet exoplanet) {
         this.exoplanet = exoplanet;
     }
 

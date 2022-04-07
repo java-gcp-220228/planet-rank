@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "exoplanets")
-public class Exoplanets {
+public class Exoplanet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int exoplanetId;
@@ -39,10 +39,10 @@ public class Exoplanets {
     @OneToMany
     private ExoplanetLikes likes;
 
-    public Exoplanets() {
+    public Exoplanet() {
     }
 
-    public Exoplanets(String planetName, String hostName, int numberOfPlanets, int numberOfStars, int discoverYear, long planetMass, long distanceFromEarth, ExoplanetComments comment, ExoplanetLikes likes) {
+    public Exoplanet(String planetName, String hostName, int numberOfPlanets, int numberOfStars, int discoverYear, long planetMass, long distanceFromEarth, ExoplanetComments comment, ExoplanetLikes likes) {
         this.planetName = planetName;
         this.hostName = hostName;
         this.numberOfPlanets = numberOfPlanets;
@@ -54,7 +54,7 @@ public class Exoplanets {
         this.likes = likes;
     }
 
-    public Exoplanets(int exoplanetId, String planetName, String hostName, int numberOfPlanets, int numberOfStars, int discoverYear, long planetMass, long distanceFromEarth, ExoplanetComments comment, ExoplanetLikes likes) {
+    public Exoplanet(int exoplanetId, String planetName, String hostName, int numberOfPlanets, int numberOfStars, int discoverYear, long planetMass, long distanceFromEarth, ExoplanetComments comment, ExoplanetLikes likes) {
         this.exoplanetId = exoplanetId;
         this.planetName = planetName;
         this.hostName = hostName;
@@ -151,7 +151,7 @@ public class Exoplanets {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Exoplanets that = (Exoplanets) o;
+        Exoplanet that = (Exoplanet) o;
         return exoplanetId == that.exoplanetId && numberOfPlanets == that.numberOfPlanets && numberOfStars == that.numberOfStars && discoverYear == that.discoverYear && planetMass == that.planetMass && distanceFromEarth == that.distanceFromEarth && Objects.equals(planetName, that.planetName) && Objects.equals(hostName, that.hostName) && Objects.equals(comment, that.comment) && Objects.equals(likes, that.likes);
     }
 
@@ -162,7 +162,7 @@ public class Exoplanets {
 
     @Override
     public String toString() {
-        return "Exoplanets{" +
+        return "Exoplanet{" +
                 "exoplanetId=" + exoplanetId +
                 ", planetName='" + planetName + '\'' +
                 ", hostName='" + hostName + '\'' +

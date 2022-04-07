@@ -4,6 +4,8 @@ package com.revature.planetrank.models;
 import javax.persistence.*;
 import java.util.Objects;
 
+// Likes should be made an attribute of messages
+// Ankur is right, too many models
 @Entity
 @Table(name = "exoplanet_likes")
 public class ExoplanetLikes {
@@ -11,6 +13,7 @@ public class ExoplanetLikes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int exoplanetLikeId;
 
+    // you can have many likes per planet, no? maybe many to 1
     @Column
     private int exoplanetLikeCount;
 
