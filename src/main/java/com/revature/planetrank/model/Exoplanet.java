@@ -3,6 +3,7 @@ package com.revature.planetrank.model;
 import lombok.*;
 import javax.persistence.*;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "exoplanets")
@@ -33,11 +34,7 @@ public class Exoplanet {
     @Column
     private long distanceFromEarth;
 
-//    @ManyToOne
-//    private ExoplanetComments comment;
 
-//    @ManyToOne
-//    private ExoplanetLikes likes;
 
 
     @Override

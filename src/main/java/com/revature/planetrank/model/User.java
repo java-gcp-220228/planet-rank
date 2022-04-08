@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -22,6 +23,7 @@ public class User {
 
     @ManyToOne
     private UserRole role;
+
 
 
 
