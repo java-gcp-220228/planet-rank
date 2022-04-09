@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 public class JwtService {
 
     private static JwtService instance;
-    public Logger log = LoggerFactory.getLogger(Driver.class);
+    public static Logger log = LoggerFactory.getLogger(Driver.class);
     private Key key;
 
     // created an instance of jwt service and made the constructor private
@@ -37,6 +37,7 @@ public class JwtService {
         if (JwtService.instance == null) {
             JwtService.instance = new JwtService();
         }
+        log.info("\nNew JWTService instance called\n");
         return JwtService.instance;
     }
 
@@ -47,7 +48,7 @@ public class JwtService {
                 .claim("user_dto", new ObjectMapper().writeValueAsString(dto))
                 .signWith(key)
                 .compact();
-
+        log.info("\nA token has been built, returning said token. [JWT Service Layer]\n");
         return jwt;
     }
 
@@ -56,6 +57,10 @@ public class JwtService {
 
         String dtoString = (String) token.getBody().get("user_dto");
 
+        log.info("\nParsing Successful! Returning token\n");
         return (new ObjectMapper()).readValue(dtoString, UserJwtDto.class);
+
+        // potentially catch an invalid token ?
+        // throw new Unauthorized Response
     }
 }
