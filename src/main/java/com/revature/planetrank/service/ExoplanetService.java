@@ -33,8 +33,5 @@ public class ExoplanetService {
             throw new IllegalArgumentException("You must enter a valid int for the exoplanet ID");
         }
 
-
-
-
     }
 }

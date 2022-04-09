@@ -6,22 +6,38 @@ import com.revature.planetrank.model.User;
 import com.revature.planetrank.model.UserJwtDto;
 
 import java.security.Key;
+import java.sql.Driver;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 
 @Service
 public class JwtService {
 
+    private static JwtService instance;
+    public Logger log = LoggerFactory.getLogger(Driver.class);
     private Key key;
 
-    public JwtService() {
-        byte[] secret = "my_secret_passwordafdsalkj;lkvjasd;lkfoijeowiru324u02938098134lkhj;ldjfa;sldkjfDSFSLDKJFLSKJF".getBytes();
-        key = Keys.hmacShaKeyFor(secret);
+    // created an instance of jwt service and made the constructor private
+    // singleton class
+    private JwtService() {
+//        byte[] secret = "my_secret_passwordafdsalkj;lkvjasd;lkfoijeowiru324u02938098134lkhj;ldjfa;sldkjfDSFSLDKJFLSKJF".getBytes();
+//        key = Keys.hmacShaKeyFor(secret);
+        key = Keys.secretKeyFor(SignatureAlgorithm.HS384);
+    }
+
+    public static JwtService getInstance() {
+        if (JwtService.instance == null) {
+            JwtService.instance = new JwtService();
+        }
+        return JwtService.instance;
     }
 
     public String createJwt(User user) throws JsonProcessingException {

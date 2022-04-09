@@ -31,4 +31,12 @@ public class ExoplanetController {
 
         return commentList;
     }
+
+    @PostMapping("/comments")
+    @ResponseBody
+    public ExoplanetComments postExoplanetComment() {
+
+
+        return null;
+    }
 }
