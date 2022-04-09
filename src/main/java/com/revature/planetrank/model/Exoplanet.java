@@ -34,9 +34,6 @@ public class Exoplanet {
     @Column
     private long distanceFromEarth;
 
-
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

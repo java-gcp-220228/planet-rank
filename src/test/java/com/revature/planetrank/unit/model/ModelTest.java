@@ -1,4 +1,4 @@
-package com.revature.planetrank.model;
+package com.revature.planetrank.unit.model;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
