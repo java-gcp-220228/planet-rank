@@ -8,9 +8,9 @@ values(
 	'username', 'password', 1);
 
 insert into exoplanets (exoplanet_id, discover_year,distance_from_earth,host_name,number_of_planets,number_of_stars,planet_mass,planet_name)
-values(1,2019,1000,'host', 2,3,1901,'planet'),
-(2,2009,1000,'host2', 2,3,1901,'planet2'),
-(3,1800,1000,'host3', 2,3,1901,'planet3');
+values(1,2020,31.7,'AU Mic', 2,1,17,'AU Mic b'),
+(2,2018,259.5,'HD 1397', 1,1,132,'HD 1397 b'),
+(3,2021,30.7,'host3', 1,1,.55,'GJ 367 b');
 
 
 insert into exoplanet_comments (exoplanet_comment_id, comment,author_user_id,exoplanet_exoplanet_id)

@@ -29,10 +29,10 @@ public class Exoplanet {
     private int discoverYear;
 
     @Column
-    private long planetMass;
+    private double planetMass;
 
     @Column
-    private long distanceFromEarth;
+    private double distanceFromEarth;
 
     @Override
     public boolean equals(Object o) {
