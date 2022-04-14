@@ -1,10 +1,6 @@
 package com.revature.planetrank.unit.service;
 
-import com.revature.planetrank.dao.UserRepository;
-import com.revature.planetrank.model.User;
-import com.revature.planetrank.service.AuthenticationService;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
