@@ -13,6 +13,7 @@ import java.sql.Driver;
 import java.util.List;
 
 @RestController
+@CrossOrigin(originPatterns = "*", exposedHeaders = "*", allowedHeaders = "*")
 public class ExoplanetController {
 
     public static Logger log = LoggerFactory.getLogger(Driver.class);

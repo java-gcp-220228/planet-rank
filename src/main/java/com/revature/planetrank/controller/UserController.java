@@ -3,11 +3,13 @@ package com.revature.planetrank.controller;
 import com.revature.planetrank.model.User;
 import com.revature.planetrank.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(originPatterns = "*", exposedHeaders = "*", allowedHeaders = "*")
 public class UserController {
 
     @Autowired
