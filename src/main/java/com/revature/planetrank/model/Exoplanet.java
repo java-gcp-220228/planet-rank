@@ -42,17 +42,21 @@ public class Exoplanet {
     @OneToMany(mappedBy = "exoplanetId")
     private List<ExoplanetComments> comments;
 
+    @Column
+    private String cardRank;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Exoplanet exoplanet = (Exoplanet) o;
-        return exoplanetId == exoplanet.exoplanetId && numberOfPlanets == exoplanet.numberOfPlanets && numberOfStars == exoplanet.numberOfStars && discoverYear == exoplanet.discoverYear && Double.compare(exoplanet.planetMass, planetMass) == 0 && Double.compare(exoplanet.distanceFromEarth, distanceFromEarth) == 0 && likeCount == exoplanet.likeCount && Objects.equals(planetName, exoplanet.planetName) && Objects.equals(hostName, exoplanet.hostName) && Objects.equals(comments, exoplanet.comments);
+        return exoplanetId == exoplanet.exoplanetId && numberOfPlanets == exoplanet.numberOfPlanets && numberOfStars == exoplanet.numberOfStars && discoverYear == exoplanet.discoverYear && Double.compare(exoplanet.planetMass, planetMass) == 0 && Double.compare(exoplanet.distanceFromEarth, distanceFromEarth) == 0 && likeCount == exoplanet.likeCount && Objects.equals(planetName, exoplanet.planetName) && Objects.equals(hostName, exoplanet.hostName) && Objects.equals(comments, exoplanet.comments) && Objects.equals(cardRank, exoplanet.cardRank);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(exoplanetId, planetName, hostName, numberOfPlanets, numberOfStars, discoverYear, planetMass, distanceFromEarth, likeCount, comments);
+        return Objects.hash(exoplanetId, planetName, hostName, numberOfPlanets, numberOfStars, discoverYear,
+                planetMass, distanceFromEarth, likeCount, comments, cardRank);
     }
 }
 
