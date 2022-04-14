@@ -1,5 +1,4 @@
 
-
 insert into user_roles (user_id, user_role)
 values(1,'member'),
         (2,'admin');
