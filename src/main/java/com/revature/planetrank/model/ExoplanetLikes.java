@@ -14,7 +14,7 @@ import java.util.Objects;
 @NoArgsConstructor @AllArgsConstructor @Getter @Setter @ToString
 public class ExoplanetLikes {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer exoplanetLikeId;
     private Integer userId;
     private Integer exoplanetId;
