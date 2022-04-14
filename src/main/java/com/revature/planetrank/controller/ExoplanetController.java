@@ -29,9 +29,9 @@ public class ExoplanetController {
         return exoplanetList;
     }
 
-    @GetMapping("/comments")
+    @GetMapping("/comments/{exoplanetId}")
     @ResponseBody
-    public List<ExoplanetComments> getCommentsByExoplantId(@RequestParam String exoplanetId){
+    public List<ExoplanetComments> getCommentsByExoplantId(@PathVariable String exoplanetId){
         List<ExoplanetComments> commentList = exoplanetService.getCommentsByExoplanetId(exoplanetId);
 
         log.info("Exoplanet Comments have been returned [Controller Layer]");
