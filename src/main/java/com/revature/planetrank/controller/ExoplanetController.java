@@ -29,14 +29,14 @@ public class ExoplanetController {
         return exoplanetList;
     }
 
-    @GetMapping("/comments")
-    @ResponseBody
-    public List<ExoplanetComments> getCommentsByExoplantId(@RequestParam String exoplanetId){
-        List<ExoplanetComments> commentList = exoplanetService.getCommentsByExoplanetId(exoplanetId);
-
-        log.info("Exoplanet Comments have been returned [Controller Layer]");
-        return commentList;
-    }
+//    @GetMapping("/comments")
+//    @ResponseBody
+//    public List<ExoplanetComments> getCommentsByExoplantId(@RequestParam String exoplanetId){
+//        List<ExoplanetComments> commentList = exoplanetService.getCommentsByExoplanetId(exoplanetId);
+//
+//        log.info("Exoplanet Comments have been returned [Controller Layer]");
+//        return commentList;
+//    }
 
     @PostMapping("/comments")
     @ResponseBody

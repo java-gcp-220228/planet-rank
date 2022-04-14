@@ -16,11 +16,11 @@ public class ExoplanetComments {
     @Column
     private String comment;
 
-    @ManyToOne
-    private User author;
+    @Column
+    private Integer authorId;
 
-    @ManyToOne
-    private Exoplanet exoplanet;
+    @Column
+    private Integer exoplanetId ;
 
     @Override
     public boolean equals(Object o) {
