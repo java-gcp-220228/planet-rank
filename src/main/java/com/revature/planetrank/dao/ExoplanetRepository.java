@@ -15,7 +15,7 @@ public interface ExoplanetRepository extends JpaRepository<Exoplanet, Integer> {
 
     public abstract List<Exoplanet> findAll();
 
-    @Query("SELECT ec FROM ExoplanetComments ec JOIN ec.exoplanet e WHERE e.exoplanetId = ?1")
-    public abstract List<ExoplanetComments> findByExoplanetID(int exoplanetId);
+//    @Query("SELECT ec FROM ExoplanetComments ec JOIN ec.exoplanet e WHERE e.exoplanetId = ?1")
+//    public abstract List<ExoplanetComments> findByExoplanetID(int exoplanetId);
 
 }

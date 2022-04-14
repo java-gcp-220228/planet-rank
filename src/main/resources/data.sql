@@ -23,11 +23,11 @@ values(1,2020,31.7,'AU Mic', 2,1,17,'AU Mic b'),
 (9,2021,30.7,'host3', 1,1,.55,'GJ 367 b');
 
 
-insert into exoplanet_comments (exoplanet_comment_id, comment,author_user_id,exoplanet_exoplanet_id)
-values(1,'sweet',1,1),
-(2,'sweet2',1,1),
-(3,'sweet3',1,2),
-(4,'sweet4',1,2),
-(5,'sweet5',1,3);
+--insert into exoplanet_comments (exoplanet_comment_id, comment,author_user_id,exoplanet_exoplanet_id)
+--values(1,'sweet',1,1),
+--(2,'sweet2',1,1),
+--(3,'sweet3',1,2),
+--(4,'sweet4',1,2),
+--(5,'sweet5',1,3);
 
 
