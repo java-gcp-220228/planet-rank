@@ -36,6 +36,8 @@ public class Exoplanet {
     @Column
     private double distanceFromEarth;
 
+    @Transient
+    private int likeCount;
 
     @OneToMany(mappedBy = "exoplanetId")
     private List<ExoplanetComments> comments;
@@ -45,12 +47,12 @@ public class Exoplanet {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Exoplanet exoplanet = (Exoplanet) o;
-        return exoplanetId == exoplanet.exoplanetId && numberOfPlanets == exoplanet.numberOfPlanets && numberOfStars == exoplanet.numberOfStars && discoverYear == exoplanet.discoverYear && planetMass == exoplanet.planetMass && distanceFromEarth == exoplanet.distanceFromEarth && Objects.equals(planetName, exoplanet.planetName) && Objects.equals(hostName, exoplanet.hostName);
+        return exoplanetId == exoplanet.exoplanetId && numberOfPlanets == exoplanet.numberOfPlanets && numberOfStars == exoplanet.numberOfStars && discoverYear == exoplanet.discoverYear && Double.compare(exoplanet.planetMass, planetMass) == 0 && Double.compare(exoplanet.distanceFromEarth, distanceFromEarth) == 0 && likeCount == exoplanet.likeCount && Objects.equals(planetName, exoplanet.planetName) && Objects.equals(hostName, exoplanet.hostName) && Objects.equals(comments, exoplanet.comments);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(exoplanetId, planetName, hostName, numberOfPlanets, numberOfStars, discoverYear, planetMass, distanceFromEarth);
+        return Objects.hash(exoplanetId, planetName, hostName, numberOfPlanets, numberOfStars, discoverYear, planetMass, distanceFromEarth, likeCount, comments);
     }
 }
 
