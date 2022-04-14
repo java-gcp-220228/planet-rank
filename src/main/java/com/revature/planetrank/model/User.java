@@ -21,6 +21,7 @@ public class User {
     @Column(name = "users_password")
     private String password;
 
+    @JoinColumn(columnDefinition = "varchar(255) default 'member'")
     @ManyToOne
     private UserRole role;
 
