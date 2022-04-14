@@ -17,7 +17,7 @@ import javax.security.auth.login.FailedLoginException;
 import java.sql.Driver;
 
 @RestController
-//@CrossOrigin(originPatterns = "*", exposedHeaders = "*", allowedHeaders = "*")
+@CrossOrigin(originPatterns = "*", exposedHeaders = "*", allowedHeaders = "*")
 public class AuthenticationController {
 
     @Autowired

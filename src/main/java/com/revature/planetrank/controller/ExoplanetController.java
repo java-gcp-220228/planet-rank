@@ -13,6 +13,7 @@ import java.sql.Driver;
 import java.util.List;
 
 @RestController
+@CrossOrigin(originPatterns = "*", exposedHeaders = "*", allowedHeaders = "*")
 public class ExoplanetController {
 
     public static Logger log = LoggerFactory.getLogger(Driver.class);
@@ -29,6 +30,7 @@ public class ExoplanetController {
         return exoplanetList;
     }
 
+<<<<<<< feature/exoplanet-comments
 //    @GetMapping("/comments")
 //    @ResponseBody
 //    public List<ExoplanetComments> getCommentsByExoplantId(@RequestParam String exoplanetId){
@@ -37,6 +39,16 @@ public class ExoplanetController {
 //        log.info("Exoplanet Comments have been returned [Controller Layer]");
 //        return commentList;
 //    }
+=======
+    @GetMapping("/comments/{exoplanetId}")
+    @ResponseBody
+    public List<ExoplanetComments> getCommentsByExoplantId(@PathVariable String exoplanetId){
+        List<ExoplanetComments> commentList = exoplanetService.getCommentsByExoplanetId(exoplanetId);
+
+        log.info("Exoplanet Comments have been returned [Controller Layer]");
+        return commentList;
+    }
+>>>>>>> main
 
     @PostMapping("/comments")
     @ResponseBody
