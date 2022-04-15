@@ -6,6 +6,7 @@ import com.revature.planetrank.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
 import javax.security.auth.login.FailedLoginException;
@@ -23,16 +24,24 @@ public class AuthenticationService {
     public User login(String username, String password) throws FailedLoginException {
 
         // trim() will trim all leading and trailing whitespace
-        User user = userRepo.findByUsernameAndPassword(username.trim(), password.trim());
 
-        // No User in the database matched a particular username and password
-        if (user == null) {
+//        User user = userRepo.findByUsernameAndPassword(username.trim(), BCrypt.hashpw(password.trim(),BCrypt.gensalt()));
+        User user1 = userRepo.findByUsername(username.trim());
+        System.out.println(user1);
+        if(!BCrypt.checkpw(password,user1.getPassword())){
             log.info("\nInvalid user/pass with credentials" +
                     "\nusername: " + username +
                     "\npassword: " + password);
             throw new FailedLoginException("Invalid username and/or password");
         }
+        // No User in the database matched a particular username and password
+//        if (user == null) {
+//            log.info("\nInvalid user/pass with credentials" +
+//                    "\nusername: " + username +
+//                    "\npassword: " + password);
+//            throw new FailedLoginException("Invalid username and/or password");
+//        }
 
-        return user;
+        return user1;
     }
 }

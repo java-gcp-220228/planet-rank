@@ -10,6 +10,6 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     public abstract User findByUsernameAndPassword(String username, String password);
-
+    public abstract User findByUsername(String username);
 //    public abstract List<ExoplanetComments> findExoplanetCommentsByUserId(int userId);
 }
