@@ -22,11 +22,16 @@ values(1,2020,31.7,'AU Mic', 2,1,17,'AU Mic b', 'Bronze'),
       (9,2006,154.9,'eps Tau', 1,1,2415.4,'eps Tau b', 'Silver');
 
 
---insert into exoplanet_comments (exoplanet_comment_id, comment,author_user_id,exoplanet_exoplanet_id)
---values(1,'sweet',1,1),
---(2,'sweet2',1,1),
---(3,'sweet3',1,2),
---(4,'sweet4',1,2),
---(5,'sweet5',1,3);
+insert into exoplanet_comments (exoplanet_comment_id, comment,author_id,exoplanet_id)
+values(1,'sweet',1,1),
+(2,'sweet',1,1),
+(3,'sweet',1,1),
+(4,'sweet',1,1),
+(5,'sweet',1,1),
+(6,'sweet',1,1),
+(7,'sweet2',1,1),
+(8,'sweet3',1,2),
+(9,'sweet4',1,2),
+(10,'sweet5',1,3);
 
 

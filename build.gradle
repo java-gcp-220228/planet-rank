@@ -15,6 +15,18 @@ configurations {
 	}
 }
 
+jar {
+	manifest {
+		attributes 'Main-Class': 'com.revature.main.Driver'
+	}
+
+	from {
+		(configurations.runtimeClasspath).collect {it.isDirectory() ? it : zipTree(it)
+		}
+	}
+
+	duplicatesStrategy 'exclude'
+}
 
 
 repositories {
