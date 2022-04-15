@@ -2,10 +2,8 @@ package com.revature.planetrank.model;
 
 import lombok.*;
 import javax.persistence.*;
-import javax.xml.stream.events.Comment;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Table(name = "exoplanets")

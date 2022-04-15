@@ -3,7 +3,6 @@ package com.revature.planetrank.controller;
 
 import com.revature.planetrank.model.Exoplanet;
 import com.revature.planetrank.model.ExoplanetComments;
-import com.revature.planetrank.model.ExoplanetLikes;
 import com.revature.planetrank.service.ExoplanetLikeService;
 import com.revature.planetrank.service.ExoplanetService;
 import org.slf4j.Logger;

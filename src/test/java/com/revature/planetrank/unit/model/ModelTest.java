@@ -1,7 +1,7 @@
-package com.revature.planetrank.unit.model;
+//package com.revature.planetrank.unit.model;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Assertions;
+//import org.junit.jupiter.api.Test;
 
 //@SpringBootTest
 //public class ModelTest {
