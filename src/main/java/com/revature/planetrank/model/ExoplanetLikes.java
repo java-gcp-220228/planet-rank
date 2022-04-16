@@ -5,10 +5,6 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Objects;
 
-//import java.util.Objects;
-//
-//// Likes should be made an attribute of messages
-//// Ankur is right, too many models
 @Entity
 @Table(name = "exoplanet_likes")
 @NoArgsConstructor @AllArgsConstructor @Getter @Setter @ToString

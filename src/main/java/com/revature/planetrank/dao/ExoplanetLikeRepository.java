@@ -9,4 +9,5 @@ public interface ExoplanetLikeRepository extends JpaRepository<ExoplanetLikes, I
 
     @Query("SELECT count(*) From ExoplanetLikes e where e.exoplanetId = :id")
     int countLikesByExoplanetId(@Param("id") Integer id);
+
 }

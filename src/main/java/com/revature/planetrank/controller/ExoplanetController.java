@@ -3,6 +3,7 @@ package com.revature.planetrank.controller;
 
 import com.revature.planetrank.model.Exoplanet;
 import com.revature.planetrank.model.ExoplanetComments;
+import com.revature.planetrank.service.ExoplanetLikeService;
 import com.revature.planetrank.service.ExoplanetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +22,16 @@ public class ExoplanetController {
     @Autowired
     private ExoplanetService exoplanetService;
 
+    @Autowired
+    private ExoplanetLikeService exoplanetLikeService;
+
     @GetMapping("/exoplanets")
     public List<Exoplanet> getExoplanets(){
 
         List<Exoplanet> exoplanetList = exoplanetService.getAllExoplanets();
+        for (Exoplanet e: exoplanetList){
+            e.setLikeCount(exoplanetLikeService.countLikesByExoplanetId(e.getExoplanetId()));
+        }
 
         log.info("All Exoplanets have been returned [Controller Layer]");
         return exoplanetList;

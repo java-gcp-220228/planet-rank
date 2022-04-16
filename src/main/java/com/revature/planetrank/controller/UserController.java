@@ -1,7 +1,6 @@
 package com.revature.planetrank.controller;
 
 import com.revature.planetrank.model.User;
-import com.revature.planetrank.model.UserRole;
 import com.revature.planetrank.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;

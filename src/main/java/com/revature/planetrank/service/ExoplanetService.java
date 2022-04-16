@@ -3,7 +3,6 @@ package com.revature.planetrank.service;
 
 import com.revature.planetrank.dao.ExoplanetRepository;
 import com.revature.planetrank.model.Exoplanet;
-import com.revature.planetrank.model.ExoplanetComments;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
