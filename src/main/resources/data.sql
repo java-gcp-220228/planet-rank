@@ -30,3 +30,16 @@ values(1,2020,31.7,'AU Mic', 2,1,17,'AU Mic b', 'Bronze'),
 --(5,'sweet5',1,3);
 
 
+insert into gallery_images (author, date_created, description, nasa_id, orig_url, thumb_url, large_url, title) values
+('Hubble', NOW(), 'this is the description', 'nasaID',
+'https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001935/GSFC_20171208_Archive_e001935~orig.jpg',
+'https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001935/GSFC_20171208_Archive_e001935~thumb.jpg',
+'https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001935/GSFC_20171208_Archive_e001935~orig.jpg',
+'title here');
+
+
+
+insert into gallery_comments (author_id, author_name, image_comment, nasa_id, upload_date) values
+(5, 'bryce', 'Nice image you got there!', 'nasaID', NOW() - interval '1 month'),
+(4, 'pashayev', 'Thanks NASA!', 'nasaID', NOW() - interval '2 month'),
+(3, 'ankur', 'Awesome!', 'nasaID', NOW() - interval '3 month');

@@ -6,15 +6,13 @@ import com.revature.planetrank.model.Image;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
-@RequestMapping("/nasa_images")
+//@RequestMapping("/nasa_images")
 @CrossOrigin(originPatterns = "*", exposedHeaders = "*", allowedHeaders = "*")
 public class GalleryController {
 
@@ -34,6 +32,22 @@ public class GalleryController {
             }
 
             return new ResponseEntity<>(images, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @GetMapping("/images/{nasa_id}")
+    public ResponseEntity<List<Image>> getImageByNasaId(@PathVariable("nasa_id") String nasaId){
+        try{
+            List<Image> image = new ArrayList<Image>();
+            image.addAll(imageRepository.findByNasaId(nasaId));
+
+            if (image.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+
+            return new ResponseEntity<>(image, HttpStatus.OK);
+
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
