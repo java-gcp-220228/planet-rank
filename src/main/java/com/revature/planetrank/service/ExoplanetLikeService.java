@@ -19,4 +19,5 @@ public class ExoplanetLikeService {
         return exoplanetLikeRepository.countLikesByExoplanetId(id);
 
     }
+
 }

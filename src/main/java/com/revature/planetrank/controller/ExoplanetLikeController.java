@@ -1,5 +1,6 @@
 package com.revature.planetrank.controller;
 
+import com.revature.planetrank.model.Exoplanet;
 import com.revature.planetrank.model.ExoplanetLikes;
 import com.revature.planetrank.service.ExoplanetLikeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,4 +17,6 @@ public class ExoplanetLikeController {
     public ExoplanetLikes addlike(@RequestBody ExoplanetLikes like){
         return exoplanetLikeService.createLike(like);
     }
+
+
 }
