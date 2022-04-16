@@ -11,7 +11,6 @@ public class PlanetRankApplication {
 
 	public static void main(String[] args) {
 
-
 		SpringApplication.run(PlanetRankApplication.class, args);
 
 	}
