@@ -27,22 +27,4 @@ public class ExoplanetService {
         return exoplanetList;
 
     }
-
-//    public List<ExoplanetComments> getCommentsByExoplanetId(String exoplanetId){
-//        try {
-//            int exoplanet_id = Integer.parseInt((exoplanetId));
-//            List<ExoplanetComments> commentsList = exoplanetRepo.findByExoplanetID(exoplanet_id);
-//            log.info("Returned commentsList for exoplanet: " + exoplanetId);
-//            return commentsList;
-//        }
-//        catch (NumberFormatException n){
-//            log.info("IllegalArgument Exception has been thrown");
-//            throw new IllegalArgumentException("You must enter a valid int for the exoplanet ID");
-//        }
-//
-//    }
-
-    public Exoplanet getExoplanetById(int id){
-        return exoplanetRepo.getById(id);
-    }
 }

@@ -8,8 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class ExoplanetLikeService {
 
-    @Autowired
-    private ExoplanetLikeRepository exoplanetLikeRepository;
+    public ExoplanetLikeService(final ExoplanetLikeRepository exoplanetLikeRepository) {
+        this.exoplanetLikeRepository = exoplanetLikeRepository;
+    }
+
+    public final ExoplanetLikeRepository exoplanetLikeRepository;
 
     public ExoplanetLikes createLike( ExoplanetLikes like){
         return exoplanetLikeRepository.save(like);

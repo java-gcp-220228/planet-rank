@@ -27,7 +27,7 @@ public class JwtService {
 
     // created an instance of jwt service and made the constructor private
     // singleton class
-    private JwtService() {
+    public JwtService() {
 //        byte[] secret = "my_secret_passwordafdsalkj;lkvjasd;lkfoijeowiru324u02938098134lkhj;ldjfa;sldkjfDSFSLDKJFLSKJF".getBytes();
 //        key = Keys.hmacShaKeyFor(secret);
         key = Keys.secretKeyFor(SignatureAlgorithm.HS384);

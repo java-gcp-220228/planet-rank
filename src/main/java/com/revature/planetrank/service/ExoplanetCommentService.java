@@ -8,8 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class ExoplanetCommentService {
 
-    @Autowired
-    private ExoplanetCommentRepository exoplanetCommentRepository;
+    public ExoplanetCommentService(final ExoplanetCommentRepository exoplanetCommentRepository) {
+        this.exoplanetCommentRepository = exoplanetCommentRepository;
+    }
+
+    public final ExoplanetCommentRepository exoplanetCommentRepository;
 
     public ExoplanetComments createComment(ExoplanetComments comment){
 

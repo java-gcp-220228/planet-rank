@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'jacoco'
 }
 
 group = 'com.revature'
@@ -13,6 +14,20 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+}
+
+jacoco{
+	toolVersion = "0.8.7"
+	reportsDirectory = file("$buildDir/jacoco")
+
+}
+
+test{
+	finalizedBy jacocoTestReport
+}
+
+jacocoTestReport{
+	dependsOn test
 }
 
 jar {
@@ -41,11 +56,13 @@ dependencies {
 	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
 	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.2'
 	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
 
 }
 
