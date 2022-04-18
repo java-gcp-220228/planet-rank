@@ -7,8 +7,6 @@ import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class UrlToJson {
@@ -20,9 +18,14 @@ public class UrlToJson {
     }
 
     public JSONObject getJsonObject() throws IOException, ParseException {
-        InputStream inputStream = new URL(jsonUrl).openStream();
+        InputStream inputStream = null;
+        try {
+            inputStream = new URL(jsonUrl).openStream();
+        } finally {
+            inputStream.close();
+        }
         JSONParser jsonParser = new JSONParser();
-        return (JSONObject)jsonParser.parse(new InputStreamReader(inputStream, "UTF-8"));
+        return (JSONObject) jsonParser.parse(new InputStreamReader(inputStream, "UTF-8"));
 
     }
 

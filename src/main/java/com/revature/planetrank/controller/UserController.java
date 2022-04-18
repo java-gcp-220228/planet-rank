@@ -21,7 +21,6 @@ public class UserController {
     }
     @PostMapping("/user")
     public User createNewUser(@RequestBody User user){
-        // Encrypt password
         user.setPassword(BCrypt.hashpw(user.getPassword(),BCrypt.gensalt()));
         User newUser = userService.createUser(user);
         return newUser;
