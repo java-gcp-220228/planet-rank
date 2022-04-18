@@ -1,6 +1,5 @@
 package com.revature.planetrank.service;
 
-import com.revature.planetrank.dao.ExoplanetCommentRepository;
 import com.revature.planetrank.dao.GalleryCommentRepository;
 import com.revature.planetrank.dao.UserRepository;
 import com.revature.planetrank.model.GalleryComments;
